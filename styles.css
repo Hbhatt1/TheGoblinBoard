@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3f5c7a;
+    font-family: 'Sono', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:  center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.btn{
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+    padding: 20px 40px;
+    border-radius: 8px;   
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: 0.4s;
+    color: #000000;
+    background-image: linear-gradient(to top, #36b843 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: 0% 0%;
+}
+
+.btn:after, .btn:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.4s, opacity 0.1s 0.4s;
+    opacity: 0;
+}
+
+.btn:after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid #b83636;
+    border-right: 3px solid #b83636;
+}
+
+.btn:before {
+    top: 0;
+    left: 0;
+    border-left: 3px solid #b83636;
+    border-top: 3px solid #b83636;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+    background-position: 0% 100%;
+}
+
+.btn:hover:after, .btn:hover:before {
+    width: 99%;
+    height: 98%;
+    transition: 0.1s, opacity 0.1s;
+    opacity: 1;
+    color: #36b843;
+    background-position: 0% 100%;
+}
